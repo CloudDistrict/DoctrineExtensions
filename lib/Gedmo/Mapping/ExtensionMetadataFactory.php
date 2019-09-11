@@ -86,6 +86,7 @@ class ExtensionMetadataFactory
                     $isBaseInheritanceLevel = !$class->isInheritanceTypeNone()
                         && !$class->parentClasses
                         && $config
+                        && !$class->isInheritanceTypeJoined()
                     ;
                     if ($isBaseInheritanceLevel) {
                         $useObjectName = $class->name;
